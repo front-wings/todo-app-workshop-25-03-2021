@@ -1,3 +1,3 @@
-import { FwFooter } from './FwFooter.js';
+import { FwFooter } from './components/FwFooter.js';
 
 customElements.define('fw-footer', FwFooter);

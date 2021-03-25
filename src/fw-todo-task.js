@@ -1,3 +1,3 @@
-import { FwTodoTask } from './FwTodoTask.js';
+import { FwTodoTask } from './components/FwTodoTask.js';
 
 customElements.define('fw-todo-task', FwTodoTask);

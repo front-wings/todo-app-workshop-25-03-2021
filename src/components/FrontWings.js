@@ -1,8 +1,8 @@
 import { LitElement, html, css } from 'lit-element';
-import { TodoService } from './todo.service.js';
-import { openWcLogo } from './open-wc-logo.js';
-import './fw-todo-task.js';
-import './fw-footer.js';
+import { TodoService } from '../services/todo.service.js';
+import { openWcLogo } from '../common/open-wc-logo.js';
+import '../fw-todo-task.js';
+import '../fw-footer.js';
 
 export class FrontWings extends LitElement {
   static get properties() {

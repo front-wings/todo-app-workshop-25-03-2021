@@ -1,5 +1,5 @@
 import { html } from 'lit-html';
-import { openWcLogo } from '../src/open-wc-logo.js';
+import { openWcLogo } from '../src/common/open-wc-logo.js';
 
 export default {
   title: 'Components / Todo',
