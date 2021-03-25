@@ -1,9 +1,9 @@
-import { html } from 'lit-html';
-import '../src/components/fw-todo-task.js';
+import { html } from "lit-html";
+import "../src/components/fw-todo-task.js";
 
 export default {
-  title: 'Components / Todo',
-  component: 'fw-todo-task',
+  title: "Components / Todo",
+  component: "fw-todo-task",
   argTypes: {},
 };
 
@@ -15,6 +15,6 @@ function Template({ title, finished }) {
 
 export const TodoTask = Template.bind({});
 TodoTask.args = {
-  title: 'My app',
+  title: "My app",
   isDone: false,
 };

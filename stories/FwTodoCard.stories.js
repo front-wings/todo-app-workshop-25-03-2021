@@ -1,9 +1,9 @@
-import { html } from 'lit-html';
-import { openWcLogo } from '../src/common/open-wc-logo.js';
+import { html } from "lit-html";
+import { openWcLogo } from "../src/common/open-wc-logo.js";
 
 export default {
-  title: 'Components / Todo',
-  component: 'fw-todo-card',
+  title: "Components / Todo",
+  component: "fw-todo-card",
   argTypes: {},
 };
 
@@ -75,5 +75,5 @@ function Template({ todos }) {
 
 export const TodoCard = Template.bind({});
 TodoCard.args = {
-  todos: [{ isDone: false, title: 'Some Todo' }],
+  todos: [{ isDone: false, title: "Some Todo" }],
 };
