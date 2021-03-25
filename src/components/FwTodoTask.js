@@ -1,5 +1,5 @@
 import { css, html, LitElement } from 'lit-element';
-import { TodoService } from './todo.service.js';
+import { TodoService } from '../services/todo.service.js';
 
 export class FwTodoTask extends LitElement {
   static get properties() {
