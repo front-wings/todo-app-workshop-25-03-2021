@@ -31,19 +31,7 @@ export class FwFooter extends LitElement {
     const { msg } = this;
 
     return html`
-      <p>
-        ${msg
-          ? html`${msg}`
-          : html`
-              "🚽 Made with love by
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/open-wc"
-                >open-wc</a
-              >."
-            `}
-      </p>
+      <p>${msg ? html`${msg}` : html` copyright 2021 FrontWings `}</p>
     `;
   }
 }
