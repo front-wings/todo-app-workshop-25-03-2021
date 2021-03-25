@@ -66,7 +66,7 @@ export class FwTodoTask extends LitElement {
 
         .fw-checkbox::after {
           content: '✔';
-          color: var(--checkbox-color, #6b6f75);
+          color: var(--checkbox-color, #50498F);
           font-size: 1rem;
           opacity: 0;
           display: block;
