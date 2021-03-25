@@ -60,6 +60,7 @@ export class FrontWings extends LitElement {
       .card {
         border-radius: 5px;
         box-shadow: 6px 2px 16px 0px rgba(136, 165, 191, 0.48);
+        background-color: #fff;
       }
 
       .card__header {
