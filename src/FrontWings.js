@@ -42,16 +42,18 @@ export class FrontWings extends LitElement {
 
       .logo > svg {
         --size: 100px;
+
+        width: var(--size);
+        height: var(--size);
         margin: auto;
         animation: app-logo-spin infinite 20s linear;
-        height: var(--size);
-        width: var(--size);
       }
 
       @keyframes app-logo-spin {
         from {
           transform: rotate(0deg);
         }
+
         to {
           transform: rotate(360deg);
         }
@@ -59,7 +61,7 @@ export class FrontWings extends LitElement {
 
       .card {
         border-radius: 5px;
-        box-shadow: 6px 2px 16px 0px rgba(136, 165, 191, 0.48);
+        box-shadow: 6px 2px 16px 0 rgba(136, 165, 191, 0.48);
       }
 
       .card__header {
@@ -76,7 +78,7 @@ export class FrontWings extends LitElement {
 
       .card__header a {
         font-size: 14px;
-        color: #333333;
+        color: #333;
         font-weight: 700;
       }
 
@@ -94,6 +96,7 @@ export class FrontWings extends LitElement {
         margin: 1.5em auto;
         padding: 0.5em 1em;
         -webkit-tap-highlight-color: transparent;
+
         &,
         span {
           display: block;

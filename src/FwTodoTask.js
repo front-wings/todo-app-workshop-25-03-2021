@@ -28,20 +28,20 @@ export class FwTodoTask extends LitElement {
         }
 
         .fw-checkbox-container {
+          width: 22px;
+          height: 22px;
           position: relative;
           display: block;
-          height: 22px;
-          width: 22px;
           margin-right: 1rem;
         }
 
         #checkbox {
+          width: 1rem;
+          height: 1rem;
           position: absolute;
           left: 0;
           opacity: 0;
           cursor: pointer;
-          height: 1rem;
-          width: 1rem;
           z-index: 1;
         }
 
@@ -49,7 +49,7 @@ export class FwTodoTask extends LitElement {
           border-color: #bfd4de;
         }
 
-        #checkbox:checked ~ .fw-checkbox:after {
+        #checkbox:checked ~ .fw-checkbox::after {
           opacity: 1;
         }
 
@@ -66,7 +66,7 @@ export class FwTodoTask extends LitElement {
 
         .fw-checkbox::after {
           content: '✔';
-          color: var(--checkbox-color, #50498F);
+          color: var(--checkbox-color, #50498f);
           font-size: 1rem;
           opacity: 0;
           display: block;
