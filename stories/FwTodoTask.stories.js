@@ -1,5 +1,5 @@
 import { html } from 'lit-html';
-import '../src/fw-todo-task.js';
+import '../src/components/fw-todo-task.js';
 
 export default {
   title: 'Components / Todo',

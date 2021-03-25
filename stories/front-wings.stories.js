@@ -1,5 +1,5 @@
 import { html } from 'lit-html';
-import '../src/front-wings.js';
+import '../src/components/front-wings.js';
 
 export default {
   title: 'Pages / Index',
