@@ -12,7 +12,7 @@ export default {
 function Template({ title, backgroundColor }) {
   return html`
     <front-wings
-      style="--front-wings-background-color: ${backgroundColor || '#fff'}"
+      style="--front-wings-background-color: ${backgroundColor || '#eee'}"
       .title=${title}
     >
     </front-wings>
