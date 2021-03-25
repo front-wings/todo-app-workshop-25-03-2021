@@ -1,6 +1,6 @@
 // TODO: update story with footer args
 import { html } from 'lit-html';
-import '../src/fw-footer.js';
+import '../src/components/fw-footer.js';
 
 export default {
   title: 'Components / Footer',

@@ -1,6 +1,6 @@
 import { html, fixture, expect } from '@open-wc/testing';
 
-import '../src/front-wings.js';
+import '../src/components/front-wings.js';
 
 describe('FrontWings', () => {
   let element;
