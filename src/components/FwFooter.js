@@ -1,4 +1,4 @@
-import { css, html, LitElement } from 'lit-element';
+import { css, html, LitElement } from "lit-element";
 
 export class FwFooter extends LitElement {
   static get properties() {

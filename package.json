@@ -7,8 +7,9 @@
     "@web/dev-server-storybook": "^0.3.5",
     "@web/test-runner": "^0.12.15",
     "deepmerge": "^4.2.2",
-    "eslint": "^7.19.0",
-    "eslint-config-prettier": "^7.2.0",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
     "husky": "^4.3.8",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
@@ -19,10 +20,14 @@
     "stylelint-order": "^4.1.0"
   },
   "scripts": {
-    "lint": "npm run lint:eslint && npm run lint:style",
-    "lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore && prettier \"**/*.js\" --check --ignore-path .gitignore",
+    "lint": "npm run lint:eslint && npm run lint:prettier && npm run lint:style",
+    "lint:eslint": "eslint --ext .js,.html . --ignore-path .gitignore",
+    "lint:prettier": "prettier \"**/*.{js,json,html,css,md,yml}\" --check --ignore-path .gitignore",
     "lint:style": "stylelint ./src",
-    "format": "eslint --ext .js,.html . --fix --ignore-path .gitignore && prettier \"**/*.js\" --write --ignore-path .gitignore",
+    "format": "npm run format:eslint && npm run format:style && npm run format:prettier",
+    "format:eslint": "eslint --ext .js,.html . --fix --ignore-path .gitignore",
+    "format:prettier": "prettier \"**/*.{js,json,html,css,md,yml}\" --write --ignore-path .gitignore",
+    "format:style": "stylelint ./src --fix",
     "test": "web-test-runner --coverage",
     "test:watch": "web-test-runner --watch",
     "storybook": "web-dev-server -c .storybook/server.mjs",
@@ -42,14 +47,22 @@
     "lit-html": "^1.3.0"
   },
   "eslintConfig": {
+    "env": {
+      "es2021": true,
+      "browser": true,
+      "node": true,
+      "mocha": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2021,
+      "sourceType": "module"
+    },
     "extends": [
+      "eslint:recommended",
+      "plugin:import/errors",
       "@open-wc/eslint-config",
-      "eslint-config-prettier"
+      "prettier"
     ]
-  },
-  "prettier": {
-    "singleQuote": true,
-    "arrowParens": "avoid"
   },
   "husky": {
     "hooks": {
@@ -59,7 +72,12 @@
   "lint-staged": {
     "*.js": [
       "eslint --fix",
-      "prettier --write"
+      "prettier --write",
+      "git add"
+    ],
+    "*.{json,html,css,md,yml}": [
+      "prettier --write",
+      "git add"
     ]
   }
 }

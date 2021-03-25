@@ -1,3 +1,3 @@
-import { FrontWings } from './FrontWings.js';
+import { FrontWings } from "./FrontWings.js";
 
-customElements.define('front-wings', FrontWings);
+customElements.define("front-wings", FrontWings);

@@ -1,10 +1,10 @@
 // TODO: update story with footer args
-import { html } from 'lit-html';
-import '../src/components/fw-footer.js';
+import { html } from "lit-html";
+import "../src/components/fw-footer.js";
 
 export default {
-  title: 'Components / Footer',
-  component: 'fw-footer',
+  title: "Components / Footer",
+  component: "fw-footer",
   argTypes: {},
 };
 

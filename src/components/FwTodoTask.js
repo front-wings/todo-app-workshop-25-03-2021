@@ -1,5 +1,5 @@
-import { css, html, LitElement } from 'lit-element';
-import { TodoService } from '../services/todo.service.js';
+import { css, html, LitElement } from "lit-element";
+import { TodoService } from "../services/todo.service.js";
 
 export class FwTodoTask extends LitElement {
   static get properties() {
@@ -45,14 +45,6 @@ export class FwTodoTask extends LitElement {
           z-index: 1;
         }
 
-        #checkbox:hover ~ .fw-checkbox {
-          border-color: #bfd4de;
-        }
-
-        #checkbox:checked ~ .fw-checkbox::after {
-          opacity: 1;
-        }
-
         .fw-checkbox {
           position: absolute;
           top: 0;
@@ -65,12 +57,20 @@ export class FwTodoTask extends LitElement {
         }
 
         .fw-checkbox::after {
-          content: '✔';
+          content: "✔";
           color: var(--checkbox-color, #50498f);
           font-size: 1rem;
           opacity: 0;
           display: block;
           height: 1rem;
+        }
+
+        #checkbox:hover ~ .fw-checkbox {
+          border-color: #bfd4de;
+        }
+
+        #checkbox:checked ~ .fw-checkbox::after {
+          opacity: 1;
         }
       `,
     ];

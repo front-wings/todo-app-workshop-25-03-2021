@@ -1,3 +1,3 @@
-import { FwTodoTask } from './FwTodoTask.js';
+import { FwTodoTask } from "./FwTodoTask.js";
 
-customElements.define('fw-todo-task', FwTodoTask);
+customElements.define("fw-todo-task", FwTodoTask);
